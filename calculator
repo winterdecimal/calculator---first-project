@@ -1,0 +1,154 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<math.h>
+
+#define note "maze mat lo, enter the valid operation"
+void addition();
+void subtraction();
+void multiplication();
+void division();
+void area();
+void perimeter();
+
+int main(){
+    printf("\t\tWelcome to the scientific calculator!!\n\n");
+    int choice;
+    printf("\n******* Press 0 to quit the program ********\n");
+    printf("Enter 1 for Addition \n");
+    printf("Enter 2 for Subtraction \n");
+    printf("Enter 3 for Multiplication \n");
+    printf("Enter 4 for Division \n");
+    printf("Enter 5 to find area of rectangle \n");
+    printf("Enter 6 to find area of square \n");
+    printf("Enter 7 to find area of triangle \n");
+    printf("Enter 8 to find area of circle \n");
+    printf("Enter 9 to find perimeter of rectangle \n");
+    printf("Enter 10 to find perimeter of square \n");
+    printf("Enter 11 to find perimeter of triangle \n");
+    printf("Enter 12 to find perimeter of circle \n");
+    
+        while(1){    
+    printf("\n\nEnter the operation you want to do: ");
+    
+    scanf("%d",&choice);
+            
+    switch(choice)
+    {
+                case 1:
+                    addition();
+                    break;
+                case 2:
+                    subtraction();
+                    break;
+                case 3:
+                    multiplication();
+                    break;
+                case 4:
+                    division();
+                    break;
+                case 5:
+                    area();
+                    break;
+                case 6:
+                    side();
+                    break;
+                case 7:
+                    base ();
+                    break;
+                case 8:
+                    radius ();
+                    break;
+                case 9:
+                    rectangle();
+                    break;
+                case 10:
+                    square();
+                    break;
+                case 11:
+                    triangle();
+                    break;
+                case 12:
+                    circle();
+                    break;
+                case 0:
+                    exit(0);
+                default:
+                    printf("\n********** %s ***********\n",note);
+        }
+    
+    }
+    return 0;
+}
+
+void addition(){
+    printf("Enter the numbers you want to add: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The sum of a and b is %d\n",a+b);
+}
+void subtraction(){
+    printf("Enter the numbers you want to subtract: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The subtraction of a and b is %d\n",a-b);
+}
+void multiplication(){
+    printf("Enter the numbers you want to multiply: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The multiplication of a and b is %d\n",a*b);
+}
+void division(){
+    printf("Enter the numbers you want to divide: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The division of a and b is %f\n",(float)a/(float)b);
+}
+void area(){
+    printf("Enter the length and width of the rectangle: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The area of a and b is %d\n",a*b);
+}
+void side(){
+    printf("Enter the side of square two times: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The area of square is %d\n",a*a);
+}
+void base(){
+    printf("Enter the height and base of triangle: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The area of a and b is %d\n",a*b/2);
+}
+void radius(){
+    printf("Enter the radius of circle: ");
+    float a;
+    scanf("%f",&a);
+    printf("The area of the circle is %f\n",3.14*a*a);
+}
+void rectangle(){
+    printf("Enter the length and width: ");
+    int a,b;
+    scanf("%d%d",&a,&b);
+    printf("The perimeter of a and b is %d\n",2*a+2*b);
+}
+void square(){
+    printf("Enter the side: ");
+    float a;
+    scanf("%f",&a);
+    printf("The perimeter of a %f\n",a*4);
+}
+void triangle(){
+    printf("Enter side base and side: ");
+    int a,b,c;
+    scanf("%d%d%d",&a,&b,&c);
+    printf("The perimeter of triangle is %d\n",a+b+c);
+}
+void circle(){
+    printf("Enter the radius of circle: ");
+    float a;
+    scanf("%f",&a);
+    printf("The perimeter of the circle is %f\n",6.28*a);
+}
